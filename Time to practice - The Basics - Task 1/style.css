@@ -1,0 +1,25 @@
+body{
+    font-family: sans-serif;
+}
+h1{
+    color: blue;
+    font-family:sans-serif;
+}
+code{
+    font-family: 'Syne Mono', monospace;
+    color: red;
+}
+.for_code{
+    color:green;
+}
+li{
+    font-family:inherit;
+}
+body li{
+    background-color: black;
+    color: white;
+}
+ol li{
+    background-color: black;
+    color: white;
+}
