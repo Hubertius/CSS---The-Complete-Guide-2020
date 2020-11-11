@@ -1,0 +1,80 @@
+main{
+    padding-top: 2rem;
+    padding-bottom: 0rem;
+}
+.background_image{
+    background-image: url(plans-background.jpg);
+    filter: grayscale(40%);
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+.plan_box-es{
+    width: 80%;
+    margin: 1rem 0px;
+    border: 5px solid darkgreen;
+    border-left: none;
+    position: relative;
+}
+.plan_box-es a{
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    padding: 2rem;
+}
+.plan_box-es:hover,
+.plan_box-es:active{
+    box-shadow: 2px 2px 4px black;
+    border-color:  red;
+
+}
+.h1_title{
+    font-weight: bold;
+}
+.h2_description{
+    font-weight: bold;
+    color: #979797;
+}
+.h2_badge{
+    position: absolute;
+    top: 1.875rem;
+    right: 0px;
+    margin: 1.25rem;
+    background-color: red;
+    color: white;
+    font-size: 20px;
+}
+.p_content{
+    padding: 1rem;
+    border: 2px solid darkgreen;
+    background: white;
+}
+#plus{
+    background: rgb(213,255,220);
+}
+#free{
+    background: rgb(234, 252, 237);
+    float: right;
+    border: 5px solid darkgreen;
+    border-right: none;
+    text-align: right;
+}
+#free:hover,
+#free:active
+{
+    border-color: red;
+}
+.clear_both{
+    clear: both;
+}
+#premium{
+    background: rgb(14, 79, 31);
+    margin-bottom: 0px;
+}
+#premium .h1_title{
+    color: white;
+}
+#premium .h1_description{
+    color: #bbb;
+}
