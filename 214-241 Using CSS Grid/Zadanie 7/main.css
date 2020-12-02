@@ -1,0 +1,30 @@
+html{
+  height: 100%;
+}
+body{
+  display: grid;
+  margin: 1.25rem;
+  height: 100%;
+  grid-template-columns: [col-1-start] 16rem [col-1-end col-2-start] auto [col-2-end];
+  grid-template-rows: 5rem auto 5rem;
+}
+header{
+  background-color: purple;
+  color: white;
+  grid-column-start: col-1-start;
+  grid-column-end: col-2-end;
+}
+article{
+  background-color: red;
+  color: white;
+}
+main{
+  background-color: blue;
+  color: white;
+}
+footer{
+  background-color: purple;
+  color: white;
+  grid-column-start: col-1-start;
+  grid-column-end: col-2-end;
+}

@@ -1,0 +1,262 @@
+* {
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 16px;
+}
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0px;
+}
+.backdrop{
+    position: fixed;
+    display: none;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 100;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+}
+.toggle-button{
+    width: 3rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding-top: 0;
+    padding-bottom: 0;
+    vertical-align: middle;
+}
+
+.toggle-button:focus{
+    outline: none;
+}
+
+.toggle-button__bar{
+    width: 100%;
+    height: 0.2rem;
+    background: black;
+    display: block;
+    margin: 0.6rem 0;
+}
+
+.main-header{
+    position:fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    background-color:#7CFC00;
+    padding:0.5rem 1rem;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.main-header__brand{
+    color: #0e4f1f;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.375rem;
+    height: 1.375rem;
+}
+.main-header__brand img{
+    height: 2rem;
+}
+
+
+.mobile-nav {
+    display: none;
+    position: fixed;
+    z-index: 101;
+    top: 0;
+    left: 0;
+    background: white;
+    width: 80%;
+    height: 100vh;
+}
+
+.mobile-nav__items {
+    width: 90%;
+    height: 100%;
+    list-style: none;
+    margin: auto;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.mobile-nav__item {
+    margin: 1rem 0;
+}
+
+.mobile-nav__item a {
+    font-size: 1.5rem;
+}
+
+.main-nav{
+    display:none;
+    
+}
+.main-nav__items{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+.main-nav__item{
+    margin: 0px 1rem;
+    text-decoration:none;
+}
+
+@media (min-width: 660px){
+    .toggle-button{
+        display: none;
+    }
+    .main-nav__item{
+        padding-left: 2rem;
+    }
+    .main-nav{
+        width: calc(100% - 2.5rem); /* Dodatkowe 5 px (czyli - 54px), a nie (-49px), bo html wychwytuje biały znak po div.*/
+        display: inline-block;
+    }
+}
+
+.main-nav__item a,
+.mobile-nav__item a {
+    text-decoration:none;
+    color: #0e4f1f;
+    font-weight:bold;
+    padding: 5px 0px;
+
+}
+.main-nav__item a:hover,
+.main-nav__item a:active{
+    color: white;
+    border-bottom: 3px red solid;
+}
+.main-nav__item--cta a,
+.mobile-nav__item--cta a{
+    color: white;
+    background-color: red;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+
+}
+.main-nav__item--cta a:hover,
+.main-nav__item--cta a:active,
+.mobile-nav__item--cta a:hover,
+.mobile-nav__item--cta a:active{
+    border:none;
+    color: red;
+    background: white;
+}
+
+.button{
+    background-color: #0e4f1f;
+    color: white;
+    font: inherit;
+    border: 1.5px solid #0e4f1f;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+.button:hover,
+.button:active{
+    background-color: white;
+    color: green;
+}
+.button:focus{
+    outline: none;
+}
+
+
+.main-footer{
+    background-color: black;
+    width: 100%;
+    padding: 1rem;
+}
+.footer-list{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.footer-list-element{
+    padding: 10px;
+    display: inline-block;
+    margin: 0rem 1rem;
+}
+.footer-list-element a{
+    text-decoration: none;
+    color: white;
+}
+.footer-list-element a:hover,
+.footer-list-element a:active{
+    color: #ccc;
+}
+
+@media (max-width: 640px){
+    .footer-list{
+      flex-direction: column;
+    }
+
+}
+
+.modal {
+    position: fixed;
+    display: none;
+    z-index: 200;
+    top: 20%;
+    left: 30%;
+    width: 40%;
+    background: white;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  }
+
+  .modal__title {
+    text-align: center;
+    margin: 0 0 1rem 0;
+  }
+
+  .modal__actions {
+    text-align: center;
+  }
+
+  .modal__action {
+    border: 1px solid #0e4f1f;
+    background: #0e4f1f;
+    text-decoration: none;
+    color: white;
+    font: inherit;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+  }
+
+  .modal__action:hover,
+  .modal__action:active {
+    background: #2ddf5c;
+    border-color: #2ddf5c;
+  }
+
+  .modal__action--negative {
+    background: red;
+    border-color: red;
+  }
+
+  .modal__action--negative:hover,
+  .modal__action--negative:active {
+    background: #ff5454;
+    border-color: #ff5454;
+  }
+
